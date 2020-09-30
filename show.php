@@ -9,6 +9,5 @@
             <li class="list-group-item">Piano: <?php echo $row['floor']?></li>
             <li class="list-group-item">Numero di letti: <?php echo $row['beds']?> </li>
         </ul>
-        <p>ciao</p>
     </body>
 </html>

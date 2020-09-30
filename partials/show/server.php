@@ -7,12 +7,12 @@ if (empty($_GET['id'])) {
 
 $id = $_GET['id'];
 
-$sql = "SELECT id,room_number,floor,beds FROM stanze WHERE id=$id";
+$sql = "SELECT id, room_number, floor, beds FROM stanze WHERE id= $id";
 $result = $conn->query($sql);
 
 if ($result && $result->num_rows > 0) {
-      $row = $results->fetch_assoc();
-
+      $row = $result->fetch_assoc();
+    
 } elseif ($result) {
     echo "0 results";
 } else {
