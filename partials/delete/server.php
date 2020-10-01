@@ -5,14 +5,17 @@ if (empty($_POST['id'])) {
     die();
 }
 
-$id = $_POST['id'];
+
 
 $sql = "DELETE FROM stanze WHERE id=$id";
 
-$result = $conn->query($sql);
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $id);
+$id = $_POST['id'];
+$stmt->execute();
 
-if ($result) {
-    echo 'ok';
+if ($stmt) {
+    header('Location: $basepath/index.php?roomId=$id');
 }else {
     echo 'non ho cancellato';
 }
