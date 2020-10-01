@@ -19,4 +19,7 @@
     }else {
         die ("Errore");
     }
+
+    $stmt -> close();
+    $conn -> close();
 ?>
