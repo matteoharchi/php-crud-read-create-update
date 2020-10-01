@@ -20,7 +20,7 @@
       <input type="hidden"  name= "id" value="<?php echo $row['id']?>">
     </div>
     <div class="edit">
-      <input type="submit"  class='bg-primary'  name= "beds" value="Modifica">
+      <input type="submit"  class='bg-primary'  value="Modifica">
     </div>
 
   </form>
